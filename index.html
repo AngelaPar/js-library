@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Library</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="static/custom.css">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+	<main>
+		<nav>
+			<h1>Discove<span class="highlightText">read</span>.</h1>
+			<a href="#" id="signInBtn" class="btn btnPrimary">Sign In</a>
+			<a href="#" id="signOutBtn" class="btn btnPrimary">Sign Out</a>
+		</nav>
+		<a href="#" id="btnNewBook" class="btn btnPrimary">New Book</a>
+		<div class="form-container hide">
+			<form action="" id="bookForm">
+				<input type="text" placeholder="Title" id="newTitle" required>
+				<input type="text" placeholder="Author" id="newAuthor" required>
+				<input type="number" placeholder="Number of pages" min="0" max="999999999999" oninput="validity.valid||(value='');" id="newNumPage" required>
+				<label for="newBeenRead">I have finished reading this book</label>
+				<input id="newBeenRead" type="checkbox">
+				<a href="#" class="btn" id="btnSubmitBook">Submit</a>
+			</form>
+		</div>
+		<div class="card-container">
+		</div> 
+		<section class="userConfig hide fullScreen placeCenter">
+			<h2 class="largeText">Welcome<span class="highlightText">.</span></h2>
+			<p>Before proceeding, where do you want your books to be saved?</p>
+			<div class="flex-container">
+				<a href="#" class="btn btnLarge" id="localStorageBtn">Local Storage</a>
+				<a href="#" class="btn btnPrimary btnLarge" id="cloudStorageBtn">Cloud Storage</a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		Made with &#128156; by <a href="https://github.com/angeladlr">angeladlr</a>
+	</footer>
+	<div class="modal hide placeCenter" id="cloudLoginModal">
+		<div class="modal-content">
+			<div id="firebaseui-auth-container"></div>	
+			<div id="firebaseui-loader">Loading...</div>	
+			<span class="modal-close">&times;</span>
+		</div>
+	</div> 
+	<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+	<!-- Firebase realtime database -->
+	<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+	<!-- Firebase UI auth -->
+	<script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+	<!-- Firebase auth -->
+	<script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+	<script src="static/firebaseScript.js"></script>
+	<script src="static/script.js"></script>
+</body>
+</html>
