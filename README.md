@@ -1,7 +1,7 @@
 # Library (Firebase + LocalStorage)
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/library).
-> live [demo]:penguin:
+> live [demo](https://angeladlr-library.netlify.app/):penguin:
 
 ## Assignment
 
